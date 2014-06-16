@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.6" icons="true">  
+  <object id="1" language="java" name="agents.NomicAgent" project="nomicsun1" 
+    file="/nomicsun1/src/main/java/agents/NomicAgent.java" binary="false" label="nomicAgent" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="46" y="0"/>    
+    <execution id="2">      
+      <position height="63" width="92" x="5" y="99"/>    
+    </execution>    
+    <execution id="5">      
+      <position height="21" width="92" x="5" y="366"/>    
+    </execution>    
+    <execution id="6">      
+      <position height="105" width="92" x="5" y="421"/>    
+    </execution>  
+  </object>  
+  <object id="9" language="java" name="services.NomicService" project="nomicsun1" 
+    file="/nomicsun1/src/main/java/services/NomicService.java" binary="false" label="nomicService" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="213" y="0"/>    
+    <execution id="4">      
+      <position height="21" width="102" x="101" y="120"/>    
+    </execution>    
+    <execution id="10">      
+      <position height="84" width="102" x="101" y="159"/>    
+    </execution>    
+    <execution id="12">      
+      <position height="21" width="102" x="101" y="201"/>    
+    </execution>    
+    <execution id="13">      
+      <position height="63" width="102" x="101" y="263"/>    
+    </execution>    
+    <execution id="16">      
+      <position height="147" width="102" x="101" y="400"/>    
+    </execution>  
+  </object>  
+  <object id="18" language="java" name="services.StrategyBoardService" project="nomicsun1" 
+    file="/nomicsun1/src/main/java/services/StrategyBoardService.java" binary="false" label="strategyBoardService" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="208" y="0"/>    
+    <execution id="8">      
+      <position height="63" width="148" x="207" y="442"/>    
+    </execution>  
+  </object>  
+  <object id="21" language="java" name="facts.RuleChangeApplier" project="nomicsun1" 
+    file="/nomicsun1/src/main/java/facts/RuleChangeApplier.java" binary="false" label="ruleChangeApplier" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="304" y="0"/>    
+    <execution id="15">      
+      <position height="21" width="131" x="207" y="284"/>    
+    </execution>    
+    <execution id="22">      
+      <position height="63" width="131" x="207" y="345"/>    
+    </execution>  
+  </object>  
+  <object id="24" language="java" name="facts.AffinityManager" project="nomicsun1" 
+    file="/nomicsun1/src/main/java/facts/AffinityManager.java" binary="false" label="affinityManager" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="432" y="0"/>    
+    <execution id="20">      
+      <position height="21" width="112" x="494" y="463"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="canVoteNow(agents.NomicAgent):boolean">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="7" operation="updateAffinity(actions.ProposeRuleChange,actions.Vote):void">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="11" operation="Vote(actions.Vote):void">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="14" 
+    operation="MoralityUpdate(actions.ProposeRuleChange,agents.NomicAgent,agents.NomicAgent,actions.Vote):float">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="15"/>  
+  </message>  
+  <message id="17" operation="updateAffinity(actions.ProposeRuleChange,actions.Vote):void">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="19" operation="updateAffinity(actions.ProposeRuleChange,actions.Vote):void">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="20"/>  
+  </message>  
+  <message id="23" operation="changeMorarlity(float):void">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="5"/>  
+  </message>
+</sequence-diagram>

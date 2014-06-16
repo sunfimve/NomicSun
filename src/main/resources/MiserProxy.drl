@@ -1,0 +1,41 @@
+//created on: 05-Jun-2014
+package MiserProxy
+
+import agents.*;
+import facts.*;
+
+
+
+global org.apache.log4j.Logger logger
+
+
+rule "My harvest increasing is good"
+
+	when
+		$agent : ProxyAgent($controller : owner)
+		eval($agent.IsAvatar() && $controller.getAverageHarvestRate() < $agent.getAverageHarvestRate())
+	then
+		logger.info("I have speeded up and this is good.");
+		$agent.increasePreference(10);
+end
+
+rule "My harvest decreasing is bad"
+
+	when
+		$agent : ProxyAgent($controller : owner)
+		eval($agent.IsAvatar() && $controller.getAverageHarvestRate() > $agent.getAverageHarvestRate())
+	then
+		logger.info("I have slowed down and this is bad.");
+		$agent.decreasePreference(10);
+end
+
+rule "Getting excluded is bad"
+	when
+		$agent : ProxyAgent($controller : owner, Active == false)
+		eval($agent.IsAvatar())
+	then
+		logger.info("I got kicked out and this is bad.");
+		$agent.decreasePreference(45);
+end
+
+		

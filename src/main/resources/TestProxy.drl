@@ -1,0 +1,20 @@
+//created on: 22-May-2013
+package TestProxy
+
+import agents.Test;
+
+
+
+global org.apache.log4j.Logger logger
+
+
+
+
+rule "Your First Rule"
+
+    when
+        $test : Test ( )
+    then
+        logger.info("Death to the heathens!");
+
+end

@@ -1,0 +1,56 @@
+//created on: 05-Jun-2014
+package InvestorProxy
+
+import agents.*;
+import facts.*;
+
+
+
+global org.apache.log4j.Logger logger
+
+
+rule "My harvest increasing is good"
+
+	when
+		$agent : ProxyAgent($controller : owner)
+		eval($agent.IsAvatar() && $controller.getAverageHarvestRate() < $agent.getAverageHarvestRate())
+	then
+		logger.info("I have speeded up and this is good.");
+		$agent.increasePreference(5);
+end
+
+rule "My harvest decreasing is bad"
+
+	when
+		$agent : ProxyAgent($controller : owner)
+		eval($agent.IsAvatar() && $controller.getAverageHarvestRate() > $agent.getAverageHarvestRate())
+	then
+		logger.info("I have slowed down and this is bad.");
+		$agent.decreasePreference(5);
+end
+
+rule "Getting excluded is bad"
+	when
+		$agent : ProxyAgent($controller : owner, Active == false)
+		eval($agent.IsAvatar())
+	then
+		logger.info("I got kicked out and this is bad.");
+		$agent.decreasePreference(45);
+end
+
+rule "Depletion means doom"
+
+	when 
+
+        $lose : Lose ( $agent : causer )
+        eval( $agent instanceof ProxyAgent )
+        $proxy : ProxyAgent ( ) from $lose.getCauser()
+        $avatar : ProxyAgent( )
+        eval( $avatar.IsAvatar() )
+    then
+    	logger.info("Game over. Don't want that happen");
+    	$avatar.setPreference(0);
+    	$avatar.setPreferenceLocked(true);
+    	
+end
+		

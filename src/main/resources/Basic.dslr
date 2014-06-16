@@ -1,0 +1,80 @@
+//created on: 31-May-2014
+package defaultpkg
+
+import agents.NomicAgent;
+import agents.Test;
+import actions.Vote;
+import actions.ProposeRuleChange;
+import enums.VoteType;
+import facts.*;
+
+global org.apache.log4j.Logger logger
+global uk.ac.imperial.presage2.core.db.StorageService storage
+global java.util.Random rand;
+
+rule "Whose turn is it"
+	when
+		$agent : NomicAgent($ID : sequentialID)
+		$n : Number() from accumulate ( $sgc : NomicAgent( ) count( $sgc ) )
+		$turn : Turn($n > 0 && (number % $n.intValue()) == ($ID) && activePlayer != $agent)
+	then
+		logger.info("It's this guy's turn: " + $agent.getName());
+		$agent.Lock();
+		modify ($turn) {
+			setActivePlayer($agent)
+		};
+end
+
+
+
+
+rule "All Agents Must Vote"
+	when
+		$turn : Turn($turnNumber : number, allVoted == false)
+		$n : Number() from accumulate ( $sgc : Vote(t == $turnNumber) count( $sgc ) )
+		$agents : Number() from accumulate ( $a : NomicAgent( Active == true ) count( $a ) )
+		eval($agents.intValue() == $n.intValue())
+	then
+		logger.info("All agents have voted.");
+		modify($turn) {
+			setAllVoted(true);
+		};
+end
+
+rule "Each Agent Can Only Vote Once Per Turn"
+	when
+		$vote : Vote($turnNumber : t, $agent: voter, $id : voteID)
+		$vote2 : Vote(t == $turnNumber, voter.getID() == $agent.getID(), voteID != $id)
+	then
+		logger.info($agent.getName() + " has attempted to vote twice, and been refused.");
+		logger.info("Turn number: " + $turnNumber);
+		retract($vote2);
+end
+
+rule "Resurrect All when All Agents get suspended"
+	when
+		$agent : NomicAgent( Active != true )
+		$agents : Number() from accumulate ( $a : NomicAgent( Active != true ) count( $a ) )
+		$n : Number() from accumulate ( $sgc : NomicAgent( ) count( $sgc ) )
+		eval($agents.intValue() == $n.intValue())
+	then
+		$agent.Rejoin();
+
+end
+
+
+
+rule "Agents active have their harvests after proposal&vote"
+	when
+		$turn : Turn(allVoted == true, $agent : activePlayer)
+		eval($agent.Locked == false)
+	then		
+		$agent.harvest();
+end 
+
+rule "Refresher"
+	when
+		Test ( )
+	then
+		logger.info("Refreshing");
+end

@@ -1,0 +1,164 @@
+Time: 1
+Proposer: agent0
+Content:  To apply a modifier on agent0that is 2.0 for 2 turns.
+Success: false
+Turn0
+Time: 3
+Proposer: agent1
+Content:  To exclude agent0 from the game.
+Success: true
+Turn1
+Time: 5
+Proposer: agent2
+Content:  To add/subtract agent2's harvest rate by 1
+Success: true
+Turn2
+Time: 7
+Proposer: agent3
+Content:  To exclude agent0 from the game.
+Success: true
+Turn3
+Time: 9
+Proposer: agent4
+Content:  To apply a modifier on agent4that is 4.0 for 4 turns.
+Success: true
+Turn4
+Time: 11
+Proposer: agent0
+Content:  To invite agent0 back to the game.
+Success: false
+Turn5
+Time: 13
+Proposer: agent1
+Content:  To add/subtract agent1's harvest rate by 1
+Success: true
+Turn6
+Time: 15
+Proposer: agent2
+Content:  To add/subtract agent2's harvest rate by 2
+Success: true
+Turn7
+Time: 17
+Proposer: agent3
+Content:  To exclude agent3 from the game.
+Success: true
+Turn8
+Time: 19
+Proposer: agent4
+Content:  To apply a modifier on agent4that is 4.0 for 3 turns.
+Success: false
+Turn9
+CasterName agent4
+Vote NO
+TurnNumber 0
+CasterName agent0
+Vote YES
+TurnNumber 0
+CasterName agent3
+Vote YES
+TurnNumber 0
+CasterName agent1
+Vote NO
+TurnNumber 0
+CasterName agent2
+Vote NO
+TurnNumber 0
+CasterName agent1
+Vote NO
+TurnNumber 1
+CasterName agent0
+Vote NO
+TurnNumber 1
+CasterName agent4
+Vote YES
+TurnNumber 1
+CasterName agent3
+Vote YES
+TurnNumber 1
+CasterName agent2
+Vote YES
+TurnNumber 1
+CasterName agent4
+Vote YES
+TurnNumber 2
+CasterName agent3
+Vote NO
+TurnNumber 2
+CasterName agent1
+Vote YES
+TurnNumber 2
+CasterName agent2
+Vote YES
+TurnNumber 2
+CasterName agent4
+Vote NO
+TurnNumber 3
+CasterName agent2
+Vote YES
+TurnNumber 3
+CasterName agent1
+Vote YES
+TurnNumber 3
+CasterName agent3
+Vote NO
+TurnNumber 3
+CasterName agent3
+Vote YES
+TurnNumber 4
+CasterName agent1
+Vote NO
+TurnNumber 4
+CasterName agent4
+Vote YES
+TurnNumber 4
+CasterName agent2
+Vote YES
+TurnNumber 4
+CasterName agent4
+Vote NO
+TurnNumber 5
+CasterName agent3
+Vote NO
+TurnNumber 5
+CasterName agent1
+Vote NO
+TurnNumber 5
+CasterName agent2
+Vote YES
+TurnNumber 5
+CasterName agent1
+Vote NO
+TurnNumber 6
+CasterName agent4
+Vote YES
+TurnNumber 6
+CasterName agent2
+Vote YES
+TurnNumber 6
+CasterName agent3
+Vote YES
+TurnNumber 6
+CasterName agent1
+Vote YES
+TurnNumber 7
+CasterName agent3
+Vote NO
+TurnNumber 7
+CasterName agent2
+Vote YES
+TurnNumber 7
+CasterName agent4
+Vote YES
+TurnNumber 7
+CasterName agent4
+Vote YES
+TurnNumber 8
+CasterName agent3
+Vote NO
+TurnNumber 8
+CasterName agent2
+Vote YES
+TurnNumber 8
+CasterName agent1
+Vote NO
+TurnNumber 8

@@ -1,0 +1,37 @@
+//created on: 05-Jun-2014
+package EnvironmentalistProxy
+
+import agents.*;
+import facts.*;
+
+
+
+global org.apache.log4j.Logger logger
+
+
+
+rule "Getting excluded is bad"
+	when
+		$agent : ProxyAgent($controller : owner, Active == false)
+		eval($agent.IsAvatar())
+	then
+		logger.info("I got kicked out and this is bad.");
+		$agent.decreasePreference(45);
+end
+
+rule "Depletion means doom"
+
+	when 
+
+        $lose : Lose ( $agent : causer )
+        eval( $agent instanceof ProxyAgent )
+        $proxy : ProxyAgent ( ) from $lose.getCauser()
+        $avatar : ProxyAgent( )
+        eval( $avatar.IsAvatar() )
+    then
+    	logger.info("Game over. Don't want that happen");
+    	$avatar.setPreference(0);
+    	$avatar.setPreferenceLocked(true);
+    	
+end
+		

@@ -1,0 +1,34 @@
+# Generic Ignores #
+###################
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
+thumbs.db
+
+# Java Files #
+##############
+*.jar
+*.class
+*.war
+
+# Eclipse Files #
+#################
+*.pydevproject
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+
+# Presage2 Stuff #
+##################
+target/

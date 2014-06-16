@@ -1,0 +1,50 @@
+agent3: MISER
+Points: 17.0
+Morality: -1.2697599
+Authority: 10.0
+Total time of Exclusion: 0
+Successful Proposals: 2
+Failed Proposals: 0
+YES Votes: 6
+NO Votes: 3
+
+agent1: MISER
+Points: 16.0
+Morality: 0.196608
+Authority: 10.0
+Total time of Exclusion: 1
+Successful Proposals: 2
+Failed Proposals: 0
+YES Votes: 6
+NO Votes: 3
+
+agent0: MISER
+Points: 14.0
+Morality: -0.32686076
+Authority: 10.0
+Total time of Exclusion: 0
+Successful Proposals: 1
+Failed Proposals: 1
+YES Votes: 5
+NO Votes: 4
+
+agent2: MISER
+Points: 11.0
+Morality: -0.3072
+Authority: 10.0
+Total time of Exclusion: 0
+Successful Proposals: 1
+Failed Proposals: 1
+YES Votes: 5
+NO Votes: 4
+
+agent4: MISER
+Points: 6.0
+Morality: 0.83902466
+Authority: 10.3073435
+Total time of Exclusion: 0
+Successful Proposals: 0
+Failed Proposals: 1
+YES Votes: 5
+NO Votes: 4
+
