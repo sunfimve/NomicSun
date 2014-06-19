@@ -91,7 +91,7 @@ public class ScenarioService extends EnvironmentService {
 	
 	private ArrayList<ProxyAgent> currentProxies = new ArrayList<ProxyAgent>();
 
-	private RuleClassificationService superClassificationService;
+//	private RuleClassificationService superClassificationService;
 
 	public ScenarioService(EnvironmentSharedStateAccess ss, EnvironmentServiceProvider provider,
 			Participant p) {
@@ -285,15 +285,15 @@ public class ScenarioService extends EnvironmentService {
 
 
 
-	public RuleClassificationService getSuperClassificationService() {
-		if (superClassificationService == null) {
-			try {
-				superClassificationService = serviceProvider.getEnvironmentService(RuleClassificationService.class);
-			} catch (UnavailableServiceException e) {
-				logger.warn("Unable to get superClassificationService for " + controller.getName(), e);
-			}
-		}
-		
-		return superClassificationService;
-	}
+//	public RuleClassificationService getSuperClassificationService() {
+//		if (superClassificationService == null) {
+//			try {
+//				superClassificationService = serviceProvider.getEnvironmentService(RuleClassificationService.class);
+//			} catch (UnavailableServiceException e) {
+//				logger.warn("Unable to get superClassificationService for " + controller.getName(), e);
+//			}
+//		}
+//		
+//		return superClassificationService;
+//	}
 }

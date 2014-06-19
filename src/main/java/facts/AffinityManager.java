@@ -253,7 +253,7 @@ public class AffinityManager {
 				break;
 			case INVESTOR:
 				if(isFavored(p.getTAgent())){
-					changeAffinity(p.getProposer(),3);
+					changeAffinity(p.getProposer(),2);
 				}
 				else{
 					changeAffinity(p.getProposer(),-3);
@@ -718,6 +718,17 @@ public class AffinityManager {
 		changeAffinity(v.getVoter(),change);
 	}
 
-	
+	public void DecayAffinity(){
+		int d = 0;
+		for (Affinity A : AffinityTable){
+			if(A.Aff >= 50){
+				d = (A.Aff - 50) / 7;
+			}
+			else{
+				d = -((50 - A.Aff) / 7);
+			}
+			A.Aff = A.Aff - d;
+		}
+	}
 	
 }

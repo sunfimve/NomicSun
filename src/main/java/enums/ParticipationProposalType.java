@@ -1,7 +1,7 @@
 package enums;
 
 /**
- * Enumerates the types of rule change proposals available.
+ * Enumerates the Participation Proposal Types (in/out).
  * @author Hanguang Sun
  *
  */

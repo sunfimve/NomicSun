@@ -52,6 +52,15 @@ import facts.ModifierManager;
 import facts.RuleChangeApplier;
 import facts.Turn;
 
+
+
+////////configure initial setting in the constructor
+
+
+
+
+
+
 public class NomicService extends EnvironmentService {
 
 	private final Logger logger = Logger.getLogger(this.getClass());

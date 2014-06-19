@@ -1,0 +1,349 @@
+
+Turn 0:
+Proposal by agent0:
+ To exclude agent7 from the game.
+Vote:
+agent0-YES agent1-YES agent6-NO agent8-NO agent2-YES agent3-NO agent7-NO agent5-NO agent4-YES agent9-NO 
+Sucess:false
+agent0 takes 6.0points.
+Now there is 94.0points left and getting replenished by 2.0points.
+
+Turn 1:
+Proposal by agent1:
+ To add/subtract agent8's harvest rate by 3
+Vote:
+agent1-YES agent8-YES agent0-YES agent6-NO agent2-YES agent3-YES agent7-YES agent5-NO agent9-YES agent4-NO 
+Sucess:true
+agent1 takes 5.0points.
+Now there is 91.0points left and getting replenished by 2.0points.
+
+Turn 2:
+Proposal by agent2:
+ To exclude agent8 from the game.
+Vote:
+agent8-NO agent6-NO agent1-NO agent0-YES agent2-NO agent3-YES agent7-YES agent5-YES agent9-NO agent4-YES 
+Sucess:false
+agent2 takes 7.0points.
+Now there is 86.0points left and getting replenished by 2.0points.
+
+Turn 3:
+Proposal by agent3:
+ To apply a modifier on agent3that is 2.0 for 2 turns.
+Vote:
+agent8-NO agent1-YES agent0-NO agent6-NO agent2-YES agent3-YES agent7-YES agent5-NO agent9-YES agent4-NO 
+Sucess:true
+agent3 takes 6.0points.
+Now there is 82.0points left and getting replenished by 2.0points.
+
+Turn 4:
+Proposal by agent4:
+ To exclude agent9 from the game.
+Vote:
+agent1-NO agent0-NO agent6-YES agent8-NO agent3-NO agent2-NO agent7-NO agent5-YES agent9-NO agent4-YES 
+Sucess:false
+agent4 takes 5.0points.
+Now there is 79.0points left and getting replenished by 2.0points.
+
+Turn 5:
+Proposal by agent5:
+ To exclude agent9 from the game.
+Vote:
+agent0-NO agent1-NO agent8-NO agent6-YES agent2-NO agent3-YES agent7-NO agent5-NO agent9-NO agent4-NO 
+Sucess:false
+agent5 takes 6.0points.
+Now there is 75.0points left and getting replenished by 2.0points.
+
+Turn 6:
+Proposal by agent6:
+ To add/subtract 2 to the replenishment rate.
+Vote:
+agent1-NO agent6-YES agent8-YES agent2-YES agent0-NO agent5-YES agent9-YES agent7-YES agent3-YES agent4-YES 
+Sucess:true
+agent6 takes 6.0points.
+Now there is 71.0points left and getting replenished by 4.0points.
+
+Turn 7:
+Proposal by agent7:
+ To exclude agent0 from the game.
+Vote:
+agent1-NO agent0-NO agent6-YES agent8-YES agent2-YES agent3-YES agent7-YES agent5-YES agent9-NO agent4-NO 
+Sucess:true
+agent7 takes 6.0points.
+Now there is 69.0points left and getting replenished by 4.0points.
+
+Turn 8:
+Proposal by agent8:
+ To exclude agent4 from the game.
+Vote:
+agent8-YES agent6-YES agent1-NO agent2-YES agent3-NO agent7-YES agent5-YES agent9-YES agent4-NO 
+Sucess:true
+agent8 takes 8.0points.
+Now there is 65.0points left and getting replenished by 4.0points.
+
+Turn 9:
+Proposal by agent9:
+ To add/subtract agent0's harvest rate by 1
+Vote:
+agent2-YES agent6-NO agent8-NO agent1-YES agent3-YES agent7-YES agent5-NO agent9-YES 
+Sucess:true
+agent9 takes 6.0points.
+Now there is 63.0points left and getting replenished by 4.0points.
+
+Turn 10:
+Proposal by agent0:
+ To invite agent0 back to the game.
+Vote:
+agent6-NO agent2-NO agent1-YES agent8-NO agent3-YES agent7-NO agent5-YES agent9-YES 
+Sucess:true
+Now there is 67.0points left and getting replenished by 4.0points.
+
+Turn 11:
+Proposal by agent1:
+ To exclude agent8 from the game.
+Vote:
+agent8-NO agent1-YES agent0-YES agent6-NO agent2-NO agent3-YES agent7-NO agent5-YES agent9-NO 
+Sucess:false
+agent1 takes 7.0points.
+Now there is 64.0points left and getting replenished by 4.0points.
+
+Turn 12:
+Proposal by agent2:
+ To apply a modifier on agent3that is 0.0 for 3 turns.
+Vote:
+agent6-YES agent0-YES agent8-NO agent1-NO agent2-NO agent3-NO agent7-NO agent5-YES agent9-NO 
+Sucess:false
+agent2 takes 6.0points.
+Now there is 62.0points left and getting replenished by 4.0points.
+
+Turn 13:
+Proposal by agent3:
+ To add/subtract agent3's harvest rate by 2
+Vote:
+agent0-NO agent8-NO agent1-YES agent6-NO agent2-YES agent3-YES agent7-YES agent5-YES agent9-NO 
+Sucess:true
+agent3 takes 6.0points.
+Now there is 60.0points left and getting replenished by 4.0points.
+
+Turn 14:
+Proposal by agent4:
+ To invite agent4 back to the game.
+Vote:
+agent8-YES agent0-NO agent1-NO agent6-YES agent2-YES agent3-YES agent7-NO agent5-YES agent9-YES 
+Sucess:true
+Now there is 64.0points left and getting replenished by 4.0points.
+
+Turn 15:
+Proposal by agent5:
+ To add/subtract agent8's harvest rate by -2
+Vote:
+agent1-NO agent0-YES agent8-NO agent6-NO agent2-NO agent3-YES agent7-NO agent5-NO agent9-YES agent4-NO 
+Sucess:false
+agent5 takes 7.0points.
+Now there is 61.0points left and getting replenished by 4.0points.
+
+Turn 16:
+Proposal by agent6:
+ To apply a modifier on agent8that is 0.33333334 for 4 turns.
+Vote:
+agent8-NO agent6-NO agent0-YES agent1-YES agent2-YES agent7-YES agent3-YES agent5-YES agent9-YES agent4-YES 
+Sucess:true
+agent6 takes 6.0points.
+Now there is 59.0points left and getting replenished by 4.0points.
+
+Turn 17:
+Proposal by agent7:
+ To add/subtract agent4's harvest rate by 1
+Vote:
+agent1-NO agent8-NO agent0-YES agent6-NO agent2-NO agent3-NO agent7-NO agent5-YES agent9-NO agent4-YES 
+Sucess:false
+agent7 takes 6.0points.
+Now there is 57.0points left and getting replenished by 4.0points.
+
+Turn 18:
+Proposal by agent8:
+ To apply a modifier on agent3that is 0.0 for 2 turns.
+Vote:
+agent0-YES agent8-YES agent6-YES agent1-NO agent2-YES agent3-YES agent7-NO agent5-YES agent9-YES agent4-NO 
+Sucess:true
+agent8 takes 2.6666667points.
+Now there is 58.333332points left and getting replenished by 4.0points.
+
+Turn 19:
+Proposal by agent9:
+ To apply a modifier on agent8that is 3.0 for 4 turns.
+Vote:
+agent8-YES agent6-YES agent1-YES agent0-NO agent2-YES agent3-NO agent7-YES agent5-NO agent9-YES agent4-YES 
+Sucess:true
+agent9 takes 7.0points.
+Now there is 55.333332points left and getting replenished by 4.0points.
+
+Turn 20:
+Proposal by agent0:
+ To exclude agent0 from the game.
+Vote:
+agent1-NO agent8-NO agent0-NO agent6-YES agent2-NO agent3-YES agent7-YES agent5-YES agent9-NO agent4-NO 
+Sucess:false
+agent0 takes 7.0points.
+Now there is 52.333332points left and getting replenished by 4.0points.
+
+Turn 21:
+Proposal by agent1:
+ To apply a modifier on agent8that is 3.0 for 4 turns.
+Vote:
+agent8-YES agent1-NO agent0-YES agent6-YES agent2-NO agent3-NO agent7-NO agent5-YES agent9-YES agent4-YES 
+Sucess:true
+agent1 takes 5.0points.
+Now there is 51.333332points left and getting replenished by 4.0points.
+
+Turn 22:
+Proposal by agent2:
+ To apply a modifier on agent8that is 0.5 for 2 turns.
+Vote:
+agent0-NO agent8-NO agent6-NO agent1-NO agent2-YES agent3-NO agent7-YES agent5-YES agent9-YES agent4-YES 
+Sucess:true
+agent2 takes 6.0points.
+Now there is 49.333332points left and getting replenished by 4.0points.
+
+Turn 23:
+Proposal by agent3:
+ To apply a modifier on agent7that is 2.0 for 2 turns.
+Vote:
+agent6-YES agent1-YES agent8-NO agent0-YES agent2-NO agent3-YES agent7-YES agent5-NO agent9-YES agent4-NO 
+Sucess:true
+agent3 takes 0.0points.
+Now there is 53.333332points left and getting replenished by 4.0points.
+
+Turn 24:
+Proposal by agent4:
+ To apply a modifier on agent8that is 2.0 for 3 turns.
+Vote:
+agent1-YES agent6-YES agent8-YES agent0-NO agent2-NO agent3-NO agent7-NO agent5-NO agent9-NO agent4-YES 
+Sucess:false
+agent4 takes 7.0points.
+Now there is 50.333332points left and getting replenished by 4.0points.
+
+Turn 25:
+Proposal by agent5:
+ To apply a modifier on agent5that is 4.0 for 3 turns.
+Vote:
+agent1-NO agent0-YES agent8-YES agent6-NO agent2-NO agent3-NO agent7-YES agent9-NO agent5-YES agent4-YES 
+Sucess:false
+agent5 takes 6.0points.
+Now there is 48.333332points left and getting replenished by 4.0points.
+
+Turn 26:
+Proposal by agent6:
+ To exclude agent4 from the game.
+Vote:
+agent1-NO agent0-YES agent2-YES agent8-NO agent6-YES agent3-YES agent7-YES agent5-YES agent9-YES agent4-NO 
+Sucess:true
+agent6 takes 6.0points.
+Now there is 46.333332points left and getting replenished by 4.0points.
+
+Turn 27:
+Proposal by agent7:
+ To apply a modifier on agent4that is 0.33333334 for 4 turns.
+Vote:
+agent1-YES agent8-YES agent6-NO agent0-YES agent2-YES agent3-YES agent7-YES agent5-NO agent9-YES 
+Sucess:true
+agent7 takes 10.0points.
+Now there is 40.333332points left and getting replenished by 4.0points.
+
+Turn 28:
+Proposal by agent8:
+ To invite agent4 back to the game.
+Vote:
+agent1-YES agent6-YES agent8-YES agent0-YES agent2-YES agent3-YES agent7-YES agent5-NO agent9-YES 
+Sucess:true
+agent8 takes 10.0points.
+Now there is 34.333332points left and getting replenished by 4.0points.
+
+Turn 29:
+Proposal by agent9:
+ To add/subtract -3 to the replenishment rate.
+Vote:
+agent0-NO agent6-NO agent1-YES agent8-NO agent2-YES agent3-NO agent7-NO agent5-YES agent9-YES agent4-NO 
+Sucess:false
+agent9 takes 5.0points.
+Now there is 33.333332points left and getting replenished by 4.0points.
+
+Turn 30:
+Proposal by agent0:
+ To add/subtract agent0's harvest rate by 2
+Vote:
+agent1-NO agent8-NO agent2-NO agent0-YES agent6-YES agent3-NO agent5-NO agent7-NO agent9-YES agent4-YES 
+Sucess:false
+agent0 takes 6.0points.
+Now there is 31.333332points left and getting replenished by 4.0points.
+
+Turn 31:
+Proposal by agent1:
+ To add/subtract agent1's harvest rate by 3
+Vote:
+agent8-YES agent1-YES agent6-YES agent0-NO agent2-NO agent3-YES agent7-YES agent5-NO agent9-NO agent4-YES 
+Sucess:true
+agent1 takes 5.0points.
+Now there is 30.333332points left and getting replenished by 4.0points.
+
+Turn 32:
+Proposal by agent2:
+ To add/subtract agent1's harvest rate by -2
+Vote:
+agent1-NO agent8-YES agent0-YES agent6-YES agent2-YES agent3-NO agent5-YES agent7-NO agent9-YES agent4-NO 
+Sucess:true
+agent2 takes 7.0points.
+Now there is 27.333332points left and getting replenished by 4.0points.
+
+Turn 33:
+Proposal by agent3:
+ To apply a modifier on agent3that is 0.25 for 4 turns.
+Vote:
+agent1-YES agent0-NO agent8-YES agent6-NO agent2-YES agent3-NO agent7-NO agent5-YES agent9-YES agent4-YES 
+Sucess:true
+agent3 takes 9.0points.
+Now there is 22.333332points left and getting replenished by 4.0points.
+
+Turn 34:
+Proposal by agent4:
+ To add/subtract agent6's harvest rate by -2
+Vote:
+agent1-NO agent8-NO agent0-NO agent6-NO agent2-NO agent3-YES agent7-YES agent5-NO agent9-NO agent4-YES 
+Sucess:false
+agent4 takes 2.0points.
+Now there is 24.333332points left and getting replenished by 4.0points.
+
+Turn 35:
+Proposal by agent5:
+ To apply a modifier on agent5that is 4.0 for 2 turns.
+Vote:
+agent1-YES agent8-YES agent0-YES agent6-NO agent2-YES agent3-YES agent7-YES agent5-YES agent9-NO agent4-YES 
+Sucess:true
+agent5 takes 6.0points.
+Now there is 22.333332points left and getting replenished by 4.0points.
+
+Turn 36:
+Proposal by agent6:
+ To add/subtract agent5's harvest rate by -1
+Vote:
+agent1-NO agent6-YES agent8-YES agent0-NO agent2-NO agent3-YES agent5-YES agent7-NO agent9-NO agent4-YES 
+Sucess:false
+agent6 takes 5.0points.
+Now there is 21.333332points left and getting replenished by 4.0points.
+
+Turn 37:
+Proposal by agent7:
+ To add/subtract agent8's harvest rate by -2
+Vote:
+agent1-YES agent8-NO agent0-YES agent6-NO agent2-YES agent3-NO agent7-NO agent5-NO agent9-NO agent4-YES 
+Sucess:false
+agent7 takes 5.0points.
+Now there is 20.333332points left and getting replenished by 4.0points.
+
+Turn 38:
+Proposal by agent8:
+ To exclude agent9 from the game.
+Vote:
+agent0-NO agent1-YES agent8-YES agent6-YES agent2-NO agent3-NO agent7-NO agent5-YES agent9-NO agent4-NO 
+Sucess:false
+agent8 takes 24.333332points.
+Pool depleted.

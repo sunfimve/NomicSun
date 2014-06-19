@@ -16,7 +16,7 @@ import facts.RateChange;
  * 
  * Proposals are only that, proposals. They will not be applied to the currently active rules until voting
  * has taken place (unless some previous inventive rule changes has removed the need to vote).
- * @author Stuart Holland
+ * @author Stuart Holland/Hanguang Sun
  *
  */
 public class ProposeRuleChange extends TimeStampedAction {

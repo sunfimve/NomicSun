@@ -10,8 +10,7 @@ import agents.NomicAgent;
 import actions.ProposeRuleChange;
 
 /**
- * Defines the current turn of the game of Nomic. A single turn object is managed and updated
- * by the Nomic service to keep track of turn numbers over the course of a simulation.
+ * Defines a internal data structure to store simulation data about an Agent.
  * @author Hanguang Sun
  *
  */

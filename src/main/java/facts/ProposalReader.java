@@ -9,8 +9,7 @@ import actions.ProposeRuleChange;
 
 
 /**
- * Defines the current turn of the game of Nomic. A single turn object is managed and updated
- * by the Nomic service to keep track of turn numbers over the course of a simulation.
+ * converts a multi-attribute expressed rule into a string
  * @author Hanguang Sun
  *
  */

@@ -4,8 +4,7 @@ import java.util.ArrayList;
 
 
 /**
- * Defines the current turn of the game of Nomic. A single turn object is managed and updated
- * by the Nomic service to keep track of turn numbers over the course of a simulation.
+ * manage multiplicative modifiers on agent harvest rate or replenishment rate.
  * @author Hanguang Sun
  *
  */

@@ -9,7 +9,7 @@ import org.drools.runtime.StatefulKnowledgeSession;
 
 import plugins.StoragePlugin;
 import services.NomicService;
-import services.RuleClassificationService;
+//import services.RuleClassificationService;
 import services.ScenarioService;
 import services.StrategyBoardService;
 import uk.ac.imperial.presage2.core.environment.EnvironmentService;
@@ -38,7 +38,7 @@ import com.google.inject.Inject;
 
 /**
  * Default simulation for simulating a game of Nomic.
- * @author Stuart
+ * @author Stuart Holland/ Hanguang Sun
  *
  */
 public class NomicSimulation extends InjectedSimulation {
@@ -156,7 +156,7 @@ public class NomicSimulation extends InjectedSimulation {
 		
 		modules.add(new AbstractEnvironmentModule()
 				.addParticipantGlobalEnvironmentService(NomicService.class)
-				.addParticipantGlobalEnvironmentService(RuleClassificationService.class)
+//				.addParticipantGlobalEnvironmentService(RuleClassificationService.class)
 				.addParticipantEnvironmentService(StrategyBoardService.class)
 				.addParticipantEnvironmentService(ScenarioService.class)
 				.addActionHandler(ProposeRuleChangeActionHandler.class)

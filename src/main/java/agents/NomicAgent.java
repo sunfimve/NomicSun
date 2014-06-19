@@ -33,7 +33,8 @@ import plugins.AgentStatistics;
 /**
  * Parent class for all agents that wish to play Nomic. For an example of which functions should be overriden
  * to define agent AI behavior, see <code>ExampleAgent</code>.
- * @author Stuart Holland
+ * @author Stuart Holland/Hanguang Sun
+ * configure initial settings directly in fields.
  *
  */
 public class NomicAgent extends AbstractParticipant {
@@ -218,6 +219,8 @@ public class NomicAgent extends AbstractParticipant {
 			logger.info("It isn't my turn, and we're not voting.");
 		}
 		MoralityDecay();
+		
+		strategyadvisor.decayAffinity();
 		
 		Modifiers.decrementModifier();
 		
@@ -432,7 +435,7 @@ public class NomicAgent extends AbstractParticipant {
 		
 		Integer NumAgents = nomicService.getNumberOfAgents();
 		
-		return NumAgents * 6 + 2;
+		return NumAgents * 2 + 2;
 	}
 	
 	public void Lose() {

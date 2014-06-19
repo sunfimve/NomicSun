@@ -78,7 +78,7 @@
     <end type="SOURCE" refId="13"/>    
     <end type="TARGET" refId="15"/>  
   </message>  
-  <message id="17" operation="updateAffinity(actions.ProposeRuleChange,actions.Vote):void">    
+  <message id="17" operation="updateAffinity(actions.ProposeRuleChange,actions.Vote):void" x="9" y="399">    
     <end type="SOURCE" refId="16"/>    
     <end type="TARGET" refId="6"/>  
   </message>  

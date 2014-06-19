@@ -39,7 +39,7 @@ import facts.RuleDefinition;
 public class StrategyBoardService extends EnvironmentService {
 	
 	enum ProposalFlavor{
-		BENIFICIAL,DETRIMENTAL,NONE;
+		BENIFICIAL,DETRIMENTAL,NEUTRAL;
 	}
 
 	private final Logger logger = Logger.getLogger(this.getClass());
@@ -127,7 +127,7 @@ public class StrategyBoardService extends EnvironmentService {
 	//if the "target" actually go to the replenishment, they consider their own goal.
 	//Environmentalists and Saboteurs have different ideas on replenishment manipulations.
 	private ProposalFlavor getProposalFlavor(ProposeRuleChange currentRuleChange){
-		ProposalFlavor out = ProposalFlavor.NONE;
+		ProposalFlavor out = ProposalFlavor.NEUTRAL;
 		switch(currentRuleChange.getPurposes().get(controller)){
 		case RAISEMYGAIN:
 			out = ProposalFlavor.BENIFICIAL;
@@ -144,10 +144,10 @@ public class StrategyBoardService extends EnvironmentService {
 				out = ProposalFlavor.BENIFICIAL;
 				break;
 			case MISER:
-				out = ProposalFlavor.BENIFICIAL;
+				out = ProposalFlavor.NEUTRAL;
 				break;
 			case NONE:
-				out = ProposalFlavor.BENIFICIAL;
+				out = ProposalFlavor.NEUTRAL;
 				break;
 			case SABOTEUR:
 				out = ProposalFlavor.DETRIMENTAL;
@@ -183,10 +183,10 @@ public class StrategyBoardService extends EnvironmentService {
 					out = ProposalFlavor.DETRIMENTAL;
 					break;
 				case MISER:
-					out = ProposalFlavor.DETRIMENTAL;
+					out = ProposalFlavor.NEUTRAL;
 					break;
 				case NONE:
-					out = ProposalFlavor.DETRIMENTAL;
+					out = ProposalFlavor.NEUTRAL;
 					break;
 				case SABOTEUR:
 					out = ProposalFlavor.BENIFICIAL;
@@ -273,7 +273,7 @@ public class StrategyBoardService extends EnvironmentService {
 						advice = PG.excludeplayer(AM.getHated());
 					}
 					else {
-						MoveType = MoveType + 10;
+						MoveType = MoveType + 15;
 					}
 				}
 				if(MoveType >= 15 && MoveType < 35){
@@ -314,7 +314,7 @@ public class StrategyBoardService extends EnvironmentService {
 				if(MoveType >= 25 && MoveType < 75){
 					advice = PG.lowerreplenishment();
 				}
-				if(MoveType >= 90){
+				if(MoveType >= 75){
 					advice = PG.raisemygain();
 				}
 				break;
@@ -357,11 +357,11 @@ public class StrategyBoardService extends EnvironmentService {
 			}
 			// opinion * benefit = positive resulting in larger value to vote for.
 			if(Target != controller){
-				voteworth = (AM.getAffinity(Target)-AM.getAverageAffinity())*flavor - 20 + rand.nextInt(41);
+				voteworth = (AM.getAffinity(Target)-AM.getAverageAffinity())*flavor - 45 + rand.nextInt(41) + subsimpref / 2;
 				logger.info(controller + " - I like the target agent" + AM.getAffinity(Target));
 			}
 			else{
-				voteworth = ( 100 -AM.getAverageAffinity())*flavor - 45 + rand.nextInt(41) + subsimpref / 2;
+				voteworth = ( 100 -AM.getAverageAffinity())*flavor - 45 + rand.nextInt(41) ;
 			}
 			logger.info(controller + " - this vote's value is " + voteworth);
 			if (voteworth >= 0){
@@ -381,6 +381,10 @@ public class StrategyBoardService extends EnvironmentService {
 	public void updateAffinity(ProposeRuleChange currentRuleChange, Vote vote) {
 		AM.updateAffinity(currentRuleChange, vote);
 		
+	}
+	
+	public void decayAffinity(){
+		AM.DecayAffinity();
 	}
 	
 

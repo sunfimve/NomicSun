@@ -1,0 +1,100 @@
+agent6: ENVIRONMENTALIST
+Points: 23.0
+Average Morality: -0.12675364
+Average Authority: 10.3481865
+Total time of Exclusion: 0
+Successful Proposals: 3
+Failed Proposals: 1
+YES Votes: 20
+NO Votes: 19
+
+agent8: ENVIRONMENTALIST
+Points: 45.0
+Average Morality: 0.063896015
+Average Authority: 11.325966
+Total time of Exclusion: 0
+Successful Proposals: 3
+Failed Proposals: 0
+YES Votes: 18
+NO Votes: 21
+
+agent0: MISER
+Points: 19.0
+Average Morality: -0.26107273
+Average Authority: 10.043686
+Total time of Exclusion: 6
+Successful Proposals: 1
+Failed Proposals: 3
+YES Votes: 19
+NO Votes: 17
+
+agent1: SABOTEUR
+Points: 22.0
+Average Morality: 0.03613928
+Average Authority: 11.609006
+Total time of Exclusion: 0
+Successful Proposals: 3
+Failed Proposals: 1
+YES Votes: 19
+NO Votes: 20
+
+agent7: ENVIRONMENTALIST
+Points: 27.0
+Average Morality: -0.019664248
+Average Authority: 10.8306265
+Total time of Exclusion: 0
+Successful Proposals: 2
+Failed Proposals: 2
+YES Votes: 20
+NO Votes: 19
+
+agent3: INVESTOR
+Points: 21.0
+Average Morality: 0.061069053
+Average Authority: 10.968123
+Total time of Exclusion: 0
+Successful Proposals: 4
+Failed Proposals: 0
+YES Votes: 23
+NO Votes: 16
+
+agent2: INVESTOR
+Points: 26.0
+Average Morality: -0.1125411
+Average Authority: 10.15023
+Total time of Exclusion: 0
+Successful Proposals: 2
+Failed Proposals: 2
+YES Votes: 21
+NO Votes: 18
+
+agent4: INVESTOR
+Points: 14.0
+Average Morality: -0.115585044
+Average Authority: 10.049624
+Total time of Exclusion: 17
+Successful Proposals: 1
+Failed Proposals: 3
+YES Votes: 18
+NO Votes: 13
+
+agent9: ENVIRONMENTALIST
+Points: 18.0
+Average Morality: 0.09573032
+Average Authority: 12.401295
+Total time of Exclusion: 0
+Successful Proposals: 2
+Failed Proposals: 1
+YES Votes: 21
+NO Votes: 18
+
+agent5: INVESTOR
+Points: 25.0
+Average Morality: -0.16396387
+Average Authority: 10.207552
+Total time of Exclusion: 0
+Successful Proposals: 1
+Failed Proposals: 3
+YES Votes: 24
+NO Votes: 15
+

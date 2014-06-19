@@ -8,7 +8,7 @@ import org.drools.compiler.DroolsParserException;
 import org.drools.runtime.StatefulKnowledgeSession;
 
 import services.NomicService;
-import services.RuleClassificationService;
+//import services.RuleClassificationService;
 import services.ScenarioService;
 import services.StrategyBoardService;
 import uk.ac.imperial.presage2.core.environment.EnvironmentService;
@@ -67,7 +67,7 @@ public class SubScenarioSimulation extends NomicSimulation {
 		
 		modules.add(new AbstractEnvironmentModule()
 				.addParticipantGlobalEnvironmentService(NomicService.class)
-				.addParticipantGlobalEnvironmentService(RuleClassificationService.class)
+//				.addParticipantGlobalEnvironmentService(RuleClassificationService.class)
 				.addParticipantEnvironmentService(ScenarioService.class)
 				.addParticipantEnvironmentService(StrategyBoardService.class)
 				.addActionHandler(ProposeRuleChangeActionHandler.class)
@@ -109,18 +109,18 @@ public class SubScenarioSimulation extends NomicSimulation {
 	
 	public void LoadProxyRules(ProxyAgent avatar) {
 		
-		try {
-			// Load active settings from super sim definitions
-			RuleClassificationService ruleClassificationService = 
-					getEnvironmentService(RuleClassificationService.class);
-					
-			ruleClassificationService.LoadRuleDefinitions(scenarioService.getSuperClassificationService()
-							.getAllRules());
-		} catch (UnavailableServiceException e) {
-			logger.warn("Unable to load super rule definitions for subsim run by "
-					+ scenarioService.getController().getName(), e);
-		}
-		logger.info(")))))))))))");
+//		try {
+//			// Load active settings from super sim definitions
+//			RuleClassificationService ruleClassificationService = 
+//					getEnvironmentService(RuleClassificationService.class);
+//					
+//			ruleClassificationService.LoadRuleDefinitions(scenarioService.getSuperClassificationService()
+//							.getAllRules());
+//		} catch (UnavailableServiceException e) {
+//			logger.warn("Unable to load super rule definitions for subsim run by "
+//					+ scenarioService.getController().getName(), e);
+//		}
+//		logger.info(")))))))))))");
 		String filePath = avatar.getProxyRulesFile();
 		try {
 			NomicService nomicService = getEnvironmentService(NomicService.class);

@@ -1,7 +1,7 @@
 package enums;
 
 /**
- * Enumerates the possible turn states within a game of Nomic.
+ * Enumerates the Agent Strategy types
  * @author Hanguang Sun
  *
  */

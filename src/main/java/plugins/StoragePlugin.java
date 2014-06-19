@@ -5,6 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.UUID;
 import java.util.Date;
 
@@ -37,7 +38,11 @@ import facts.ProposalReader;
 
 /**
  * Plugin that stores all data relevant to Nomic from a single simulation. All data is stored when the simulation ends.
- * @author Stuart Holland
+ * @author Stuart Holland/Hanguang Sun
+ * turn on Agent Detail logging at onSimulationComplete();
+ *
+ *
+ *
  *
  */
 public class StoragePlugin implements Plugin {
@@ -86,17 +91,42 @@ public class StoragePlugin implements Plugin {
 		this.storage = storage;
 	}
 	
+	private void printPoints(NomicAgent agent) throws IOException{
+		String out = "";
+		for (int i = 0; i<= nomicService.getTurnNumber(); ++i){
+		out = out + agent.statistics.getPointslog().get(i) + " ";
+		}
+		FW.write(out);
+	}
+	
+	private void printAuthority(NomicAgent agent) throws IOException{
+		String out = "";
+		for (int i = 0; i<= nomicService.getTurnNumber(); ++i){
+		out = out + agent.statistics.getAuthoritylog().get(i) + " ";
+		}
+		FW.write(out);
+	}
+	
+	private void printMorality(NomicAgent agent) throws IOException{
+		String out = "";
+		for (int i = 0; i<= nomicService.getTurnNumber(); ++i){
+		out = out + agent.statistics.getMoralitylog().get(i) + " ";
+		}
+		FW.write(out);
+	}
+	
+	
 	private void StoreChange(ProposeRuleChange ruleChange) throws IOException {
 		
 		PersistentEnvironment env = storage.getSimulation().getEnvironment();
 		
 		Integer time = ruleChange.getSimTime();
 		int Turn = ruleChange.getT();
-		FW.write("Time: " + time + System.lineSeparator());
-		FW.write("Proposer: " + ruleChange.getProposer().getName() + System.lineSeparator());
-		FW.write("Content: " + PR.ReadProposal(ruleChange) + System.lineSeparator());
-		FW.write("Success: " + ruleChange.getSucceeded() + System.lineSeparator());
-		FW.write("Turn" + Turn + System.lineSeparator());
+//		FW.write("Time: " + time + System.lineSeparator());
+//		FW.write("Proposer: " + ruleChange.getProposer().getName() + System.lineSeparator());
+//		FW.write("Content: " + PR.ReadProposal(ruleChange) + System.lineSeparator());
+//		FW.write("Success: " + ruleChange.getSucceeded() + System.lineSeparator());
+//		FW.write("Turn" + Turn + System.lineSeparator());
 		
 		
 		env.setProperty("Proposer", time, ruleChange.getProposer().getName());
@@ -140,9 +170,9 @@ public class StoragePlugin implements Plugin {
 		if (vote != null) {
 			TransientAgentState state = storage.getAgentState(pid, vote.getSimTime());
 			int Turn = vote.getT();
-			FW.write("CasterName " + nomicService.getAgentName(pid) + System.lineSeparator());
-			FW.write("Vote " + vote.getVote().toString() + System.lineSeparator());
-			FW.write("TurnNumber " + Turn + System.lineSeparator());
+//			FW.write("CasterName " + nomicService.getAgentName(pid) + System.lineSeparator());
+//			FW.write("Vote " + vote.getVote().toString() + System.lineSeparator());
+//			FW.write("TurnNumber " + Turn + System.lineSeparator());
 			state.setProperty("CasterName", nomicService.getAgentName(pid));
 			state.setProperty("Vote", vote.getVote().toString());
 			state.setProperty("TurnNumber", nomicService.getTurnNumber().toString());
@@ -287,6 +317,26 @@ public class StoragePlugin implements Plugin {
 					e.printStackTrace();
 				}
 			}
+			
+			///write agent status history
+//			for (NomicAgent a : nomicService.getAgents()){
+//				String pre = a.getName() + " ";
+//				pre = pre + a.getType() + System.lineSeparator();
+//				try {
+//					FW.write(pre);
+//				
+//				FW.write(System.lineSeparator() + "Morality" + System.lineSeparator());
+//				printMorality(a);
+//				FW.write(System.lineSeparator() + "Authority" + System.lineSeparator());
+//				printAuthority(a);
+//				FW.write(System.lineSeparator() + "points" + System.lineSeparator());
+//				printPoints(a);
+//				} catch (IOException e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				}
+//			}
+			
 			
 			// Store all rule changes
 			for (ProposeRuleChange ruleChange : nomicService.getSimRuleChanges()) {

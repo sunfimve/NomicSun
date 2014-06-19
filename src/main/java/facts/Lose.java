@@ -3,8 +3,8 @@ package facts;
 import agents.NomicAgent;
 
 /**
- * Simple object that triggers a win for the agent given in its constructor parameter.
- * @author 
+ * Simple object that triggers a global lose for the agent given in its constructor parameter.
+ * @author Hanguang Sun
  *
  */
 public class Lose {

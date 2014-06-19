@@ -8,7 +8,7 @@ import enums.VoteType;
 
 /**
  * Vote action. Usable with environment.act from within an a class extending <code>AbstractParticipant</code>.
- * @author Stuart Holland
+ * @author Stuart Holland/Hanguang Sun
  *
  */
 public class Vote extends TimeStampedAction {
